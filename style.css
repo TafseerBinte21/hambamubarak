@@ -1,0 +1,127 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Sky with Moon and Stars */
+.sky {
+  height: 30vh;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.moon {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, #fff, #ddd);
+  border-radius: 50%;
+  margin: 40px auto 0;
+  box-shadow: 0 0 40px #fff8;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Stars */
+.stars .star {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 10px #fff;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+.stars .star:nth-child(1) { top: 10px; left: 30%; animation-delay: 0s; }
+.stars .star:nth-child(2) { top: 40px; left: 60%; animation-delay: 1s; }
+.stars .star:nth-child(3) { top: 20px; left: 75%; animation-delay: 2s; }
+.stars .star:nth-child(4) { top: 35px; left: 45%; animation-delay: 1.5s; }
+.stars .star:nth-child(5) { top: 15px; left: 55%; animation-delay: 0.5s; }
+
+/* Button Section */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#revealButton {
+  padding: 14px 30px;
+  font-size: 1.3em;
+  border: none;
+  background: gold;
+  color: #333;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 15px gold;
+  transition: transform 0.2s ease;
+}
+
+#revealButton:hover {
+  transform: scale(1.1);
+}
+
+/* Main Content (Hidden Initially) */
+.main-content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Card Styling */
+.card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0008;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+  max-width: 500px;
+}
+
+.card h1 {
+  margin-bottom: 15px;
+  font-size: 2.5em;
+  color: #ffd700;
+}
+
+.card p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+/* Cow Image */
+.cow {
+  width: 350px;
+  margin-top: 30px;
+  animation: floatCow 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatCow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

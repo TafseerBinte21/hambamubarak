@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eid ul-Adha Mubarak</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="eid (mp3cut.net).mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+<div class="sky">
+  <div class="moon"></div>
+  <div class="stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+</div>
+
+
+  <div class="button-container">
+    <button id="revealButton">✨ Eid Mubarak ✨</button>
+  </div>
+
+  <div class="main-content" id="eidContent">
+    <div class="card">
+      <h1>🌙 Eid ul-Adha Mubarak! 🕌</h1>
+      <p>May your sacrifice be accepted, your prayers answered,<br> and your life filled with peace and joy!</p>
+    </div>
+    <img src="coww.png" alt="Cow" class="cow" />
+  </div>
+
+  <script>
+    document.getElementById("revealButton").addEventListener("click", function () {
+      document.getElementById("eidContent").style.display = "flex";
+      this.parentElement.style.display = "none";
+    });
+  </script>
+</body>
+</html>
